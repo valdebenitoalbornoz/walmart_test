@@ -18,7 +18,7 @@ export class ProductMongoRepository implements ProductRepository {
       },
       {
         $addFields: {
-          priceWithDiscount: {$multiply: ['$price', discountFactor]},
+          price: { $multiply: ['$price', discountFactor] }
         },
       },
     ])) as Product[]
