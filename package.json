@@ -49,6 +49,6 @@
     "koa-bodyparser": "^4.3.0",
     "koa-logger": "^3.2.1",
     "koa-router": "^10.0.0",
-    "mongoose": "^5.12.15"
+    "mongoose": "^5.13.14"
   }
 }
