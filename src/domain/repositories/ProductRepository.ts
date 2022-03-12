@@ -5,5 +5,5 @@ export interface ProductRepository {
      * Find one or more products and drop the result off
      * @param search String to find
      */
-    find(search: string): Promise<Product[]>;
+    find(search: string, discount?: number): Promise<Product[]>;
 }

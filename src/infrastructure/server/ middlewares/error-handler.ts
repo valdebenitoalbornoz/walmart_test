@@ -2,8 +2,10 @@ import {Middleware} from 'koa'
 
 export const errorHandler: Middleware = async (ctx, next) => {
   try {
+    console.log(ctx)
     await next()
   } catch (error: any) {
+    console.log(error);
     ctx.status = error.statusCode ?? 500
     ctx.body = {
       timeStamp: Date.now(),
