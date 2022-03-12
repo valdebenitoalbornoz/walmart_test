@@ -1,10 +1,18 @@
 import {loadConfig} from './infrastructure/config'
 import {loadWebServer} from './infrastructure/server/server'
-import {loadDBConnection} from './infrastructure/db'
+import {loadDBConnection, MongoDBConnectionOptions} from './infrastructure/db'
 
 async function main() {
   const appConfig = loadConfig()
-  const dbModule = loadDBConnection({dbUri: appConfig.DB_URI})
+  const dbOptions: MongoDBConnectionOptions = {
+    username: appConfig.MONGO_USERNAME,
+    password: appConfig.MONGO_PASSWORD,
+    host: appConfig.MONGO_HOST,
+    database: appConfig.MONGO_DATABASE,
+    authDatabase: appConfig.MONGO_AUTH_DB,
+    port: appConfig.MONGO_PORT
+  }
+  const dbModule = loadDBConnection(dbOptions);
   const webServerModule = loadWebServer({port: appConfig.PORT})
 
   await dbModule.start()

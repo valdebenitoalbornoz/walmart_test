@@ -1,5 +1,5 @@
-import { Product } from "src/domain/entities/Product";
-import { ProductRepository } from "src/domain/repositories/ProductRepository";
+import { Product } from "../../domain/entities/Product";
+import { ProductRepository } from "../../domain/repositories/ProductRepository";
 
 
 const DISCOUNT_FACTOR = 0.5;

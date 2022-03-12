@@ -1,12 +1,19 @@
 import mongoose from 'mongoose'
 
-interface MongoDBConnectionOptions {
-  dbUri: string
+export interface MongoDBConnectionOptions {
+  username: string
+  password: string
+  host: string
+  port: number
+  database: string
+  authDatabase: string
 }
 
-export function loadDBConnection({dbUri}: MongoDBConnectionOptions) {
+export function loadDBConnection(connectOptions: MongoDBConnectionOptions) {
   let db: typeof mongoose | undefined = undefined
+  const { username, password, host, port, database, authDatabase } = connectOptions;
 
+  const dbUri = `mongodb://${username}:${password}@${host}:${port}/${database}?authSource=${authDatabase}`;
   return {
     start: async () => {
       db = await mongoose.connect(dbUri, {

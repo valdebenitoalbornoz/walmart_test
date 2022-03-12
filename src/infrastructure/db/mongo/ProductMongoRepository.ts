@@ -1,5 +1,5 @@
-import {Product} from 'src/domain/entities/Product'
-import {ProductRepository} from 'src/domain/repositories/ProductRepository'
+import {Product} from '../../../domain/entities/Product'
+import {ProductRepository} from '../../../domain/repositories/ProductRepository'
 import ProductModel from './ProductSchema'
 export class ProductMongoRepository implements ProductRepository {
   async find(search: string, discountFactor: number = 1): Promise<Product[]> {

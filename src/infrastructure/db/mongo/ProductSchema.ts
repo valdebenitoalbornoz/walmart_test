@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import { Product } from 'src/domain/entities/Product';
+import { Product } from '../../../domain/entities/Product';
 
 const schema = new Schema<Product>({
     id: Number,
