@@ -6,12 +6,7 @@ RUN npm install -g ts-node
 
 WORKDIR /app
 
-COPY package*.json ./
-
-COPY tsconfig.json ./
-
-COPY tsconfig.build.json ./
-
+COPY [ "package*.json", "tsconfig.json", "tsconfig.build.json", "./"]
 
 RUN ls -a
 

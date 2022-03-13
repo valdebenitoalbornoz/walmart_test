@@ -4,6 +4,8 @@ import { ProductMongoRepository } from '../../../db/mongo/ProductMongoRepository
 
 const repository = new ProductMongoRepository()
 
+
+
 export const productFinderController: Middleware = async (ctx, next) => {
     const { search } = ctx.request.query as any;
     const finder = new ProductFinder(repository);
