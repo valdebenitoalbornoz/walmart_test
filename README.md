@@ -17,14 +17,14 @@ NodeJS Typescript Aplication for Walmart tecnical test.
 
 It's required to specify environment variables on your .env file:
 
-- NODE_ENV=development
-- PORT=3000
-- MONGO_USERNAME=productListUser
-- MONGO_PASSWORD=productListPassword
-- MONGO_HOST=localhost
-- MONGO_PORT=27017
-- MONGO_DATABASE=promotions
-- MONGO_AUTH_DB=admin
+- NODE_ENV
+- PORT
+- MONGO_USERNAME
+- MONGO_PASSWORD
+- MONGO_HOST
+- MONGO_PORT
+- MONGO_DATABASE
+- MONGO_AUTH_DB
 
 
 # Docker
