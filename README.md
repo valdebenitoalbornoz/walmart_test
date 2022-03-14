@@ -13,6 +13,12 @@ NodeJS Typescript Aplication for Walmart tecnical test.
     npm run dev
 ```
 
+## Test
+
+```
+    npm run test
+```
+
 ## Environment
 
 It's required to specify environment variables on your .env file:
