@@ -21,7 +21,7 @@ It's required to specify environment variables on your .env file:
 - PORT=3000
 - MONGO_USERNAME=productListUser
 - MONGO_PASSWORD=productListPassword
-- MONGO_HOST=192.168.1.7
+- MONGO_HOST=localhost
 - MONGO_PORT=27017
 - MONGO_DATABASE=promotions
 - MONGO_AUTH_DB=admin
